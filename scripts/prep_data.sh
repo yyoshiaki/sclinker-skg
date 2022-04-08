@@ -1,7 +1,8 @@
 #!/bin/bash
 set -xe
 
-WORKDIR=~/media32TB/bioinformatics/autoimmune_10x/sclinker
+WORKDIR=$1
+# WORKDIR=~/media32TB/bioinformatics/autoimmune_10x/sclinker
 
 
 cd $WORKDIR
@@ -11,10 +12,10 @@ git clone https://github.com/kkdey/GSSG.git
 # git clone https://github.com/bulik/ldsc.git
 git clone https://github.com/yyoshiaki/ldsc.git
 
-# install LDSC
-cd ldsc
-conda env create --file environment.yml
-cd ..
+# # install LDSC
+# cd ldsc
+# conda env create --file environment.yml
+# cd ..
 
 # download annotations for G2S
 mkdir data
@@ -54,8 +55,8 @@ tar xvf 1000G_Phase3_weights_hm3_no_MHC.tgz
 wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/1000G_Phase3_plinkfiles.tgz
 tar xvf 1000G_Phase3_plinkfiles.tgz
 
-wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/hapmap3_snps.tgz
-tar xvf hapmap3_snps.tgz
+# wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/hapmap3_snps.tgz
+# tar xvf hapmap3_snps.tgz
 
 # https://github.com/bulik/ldsc/wiki/Partitioned-Heritability-from-Continuous-Annotations
 wget https://data.broadinstitute.org/alkesgroup/LDSCORE/w_hm3.snplist.bz2
