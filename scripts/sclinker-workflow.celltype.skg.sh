@@ -14,6 +14,8 @@ conda activate scanpy1.8.1
 # 1. generateGenePrograms.py celltype adata outdir prefix,sample_col,celltype_col 
 python $BASEDIR/scgenetics/src/generateGenePrograms.py celltype $ADATA ./ celltype,sample_id,celltype
 
+conda activate base
+
 # 2. make genescore files for each celltype
 python $BASEDIR/scripts/generate_genescores.py celltype_genescores.csv gene_scores $N_TOP_GENE
 

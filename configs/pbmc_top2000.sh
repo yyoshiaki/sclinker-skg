@@ -1,4 +1,4 @@
-BASEDIR=~/media32TB/bioinformatics/autoimmune_10x/sclinker
+BASEDIR=/home/yyasumizu/yyoshiaki-git/sclinker-skg
 
 NAME=exmaple.pbmc.2000
 WORKDIR=$BASEDIR/$NAME

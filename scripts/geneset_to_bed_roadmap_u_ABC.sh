@@ -14,5 +14,5 @@ echo $SCRIPT_DIR
 echo ${DIR_gs}
 for CELL in `cat gene_scores/categories.txt`;do
   echo ${CELL}
-  /usr/bin/Rscript $SCRIPT_DIR/geneset_to_bed_roadmap_u_ABC.R gene_scores/${CELL}.txt bed/Roadmap_U_ABC/${CELL}.bed ${DIR_gssgdata} ${TISSUE}
+  Rscript $SCRIPT_DIR/geneset_to_bed_roadmap_u_ABC.R gene_scores/${CELL}.txt bed/Roadmap_U_ABC/${CELL}.bed ${DIR_gssgdata} ${TISSUE}
 done
