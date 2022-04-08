@@ -12,7 +12,7 @@ eval "$(conda shell.bash hook)"
 conda activate scanpy1.8.1
 
 # 1. generateGenePrograms.py celltype adata outdir prefix,sample_col,celltype_col 
-python $BASEDIR/scgenetics/src/generateGenePrograms.py celltype $ADATA ./ celltype,sample_id,celltype
+python $BASEDIR/scgenetics/src/generateGenePrograms.py celltype $ADATA ./ celltype,sample_id,${CELLTYPE_COL}
 
 conda activate base
 

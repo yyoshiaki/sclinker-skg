@@ -24,7 +24,7 @@ bash scripts/prep_data.sh ${PWD}
 ```
 cd ldsc
 conda env create --file environment.yml
-conda create --name scanpy1.8.1 python=3.7 scanpy=1.8.1
+conda create --name scanpy1.8.1 python=3.8 scanpy=1.8.1
 ```
 
 ## Run sclinker-celltype
