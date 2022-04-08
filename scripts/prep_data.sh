@@ -18,20 +18,17 @@ git clone https://github.com/yyoshiaki/ldsc.git
 # cd ..
 
 # download annotations for G2S
-mkdir data
-cd data
-wget https://alkesgroup.broadinstitute.org/LDSCORE/Dey_Enhancer_MasterReg/processed_data/
-mkdir GSSG
-cd GSSG
+mkdir -p data/GSSG
+cd data/GSSG
 
-mkdir processed_data
+mkdir -p processed_data
 cd processed_data
 wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/Dey_Enhancer_MasterReg/processed_data/ABC.listbloodQC.txt
 wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/Dey_Enhancer_MasterReg/processed_data/Roadmap_map_EID_names.txt
 wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/Dey_Enhancer_MasterReg/processed_data/gene_anno_unique_datefix.txt
 cd ..
 
-mkdir data_extra
+mkdir -p data_extra
 cd data_extra
 wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/DeepLearning/Dey_DeepBoost_Imperio/data_extra/AllPredictions.AvgHiC.ABC0.015.minus150.withcolnames.ForABCPaper.txt.gz
 cd ..
@@ -41,7 +38,7 @@ wget https://ernstlab.biolchem.ucla.edu/roadmaplinking/RoadmapLinks.zip
 unzip RoadmapLinks.zip
 cd ../..
 
-mkdir ldsc
+mkdir -p ldsc
 cd ldsc
 wget https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/1000G_Phase3_baselineLD_v2.1_ldscores.tgz
 tar xvf 1000G_Phase3_baselineLD_v2.1_ldscores.tgz

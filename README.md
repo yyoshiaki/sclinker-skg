@@ -16,7 +16,7 @@
 ```
 git clone https://github.com/yyoshiaki/sclinker-skg.git
 cd sclinker-skg
-bash scripts/prep_data.sh
+bash scripts/prep_data.sh ${PWD}
 ```
 
 2. create env for ldsc
