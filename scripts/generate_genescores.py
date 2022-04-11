@@ -21,7 +21,7 @@ dir_out = sys.argv[2]
 n_gene = int(sys.argv[3])
 dir_img = sys.argv[4]
 
-os.makedirs(dir_out + '/img', exist_ok=True)
+# os.makedirs(dir_out + '/img', exist_ok=True)
 df_gs = pd.read_csv(f_input, index_col=0)
 df_gs['ALL'] = 1
 
