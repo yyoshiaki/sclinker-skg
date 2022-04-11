@@ -43,4 +43,4 @@ for i in range(df_gs.shape[1]):
     plt.yscale('log')
     plt.title(df_gs.columns[i])
 plt.tight_layout()
-plt.savefig('{}/img/hist_genescores.pdf'.format(dir_img), bbox_inches='tight')
+plt.savefig('{}/hist_genescores.pdf'.format(dir_img), bbox_inches='tight')
