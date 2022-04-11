@@ -30,7 +30,7 @@ for c in list(df_gs.columns):
     fid = ''.join(filter(str.isalnum, c))
     list_c.append(fid)
     if (n_gene > 0) & (c != "ALL"):
-        df_gs.loc[df_gs[c].rank(ascending=False) > n_gene, c] = 0
+        df_gs.loc[df_gs[c].rank(ascending=False, method='min') > n_gene, c] = 0
     df_gs[c].to_csv('{}/{}.txt'.format(dir_out, fid), sep='\t', header=None)
 
 pd.DataFrame([list_c]).T.to_csv('{}/categories.txt'.format(dir_out), header=None, index=None)
