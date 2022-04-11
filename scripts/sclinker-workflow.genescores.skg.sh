@@ -8,6 +8,8 @@ source $1
 mkdir -p $WORKDIR
 cd $WORKDIR
 
+mkdir -p img
+
 eval "$(conda shell.bash hook)"
 # conda activate scanpy1.8.1
 
@@ -15,7 +17,7 @@ eval "$(conda shell.bash hook)"
 # python $BASEDIR/scgenetics/src/generateGenePrograms.py celltype $ADATA ./ celltype,sample_id,${CELLTYPE_COL}
 
 # 2. make genescore files for each celltype
-python $BASEDIR/scripts/generate_genescores.py $GENE_SCORES gene_scores $N_TOP_GENE
+python $BASEDIR/scripts/generate_genescores.py $GENE_SCORES gene_scores $N_TOP_GENE ./img
 
 # 3. calc ABC
 bash $BASEDIR/scripts/geneset_to_bed_roadmap_u_ABC.sh gene_scores $BASEDIR/data/GSSG $TISSUE

@@ -6,7 +6,7 @@
 
 '''
 usage : 
-python generate_genescores.py <input_genescores.csv> <outdir> <top_n_gene>
+python generate_genescores.py <input_genescores.csv> <outdir> <top_n_gene> <dir_img>
 
 top_n_gene : 0 means all genes, >=1 means retain gene scores of only top n genes.
 '''
@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 f_input = sys.argv[1]
 dir_out = sys.argv[2]
 n_gene = int(sys.argv[3])
+dir_img = sys.argv[4]
 
 os.makedirs(dir_out + '/img', exist_ok=True)
 df_gs = pd.read_csv(f_input, index_col=0)
@@ -42,4 +43,4 @@ for i in range(df_gs.shape[1]):
     plt.yscale('log')
     plt.title(df_gs.columns[i])
 plt.tight_layout()
-plt.savefig('{}/img/hist.pdf'.format(dir_out), bbox_inches='tight')
+plt.savefig('{}/img/hist_genescores.pdf'.format(dir_img), bbox_inches='tight')
