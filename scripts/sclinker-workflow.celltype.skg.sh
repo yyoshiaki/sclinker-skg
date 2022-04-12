@@ -68,8 +68,7 @@ done
 conda activate base
 
 # 9. visualize
-mkdir -p img
-/usr/bin/Rscript ${BASEDIR}/scripts/visualize_Escore.R \
+Rscript ${BASEDIR}/scripts/visualize_Escore.R \
     ${DIR_REF}/sumstats.csv \
     ./gene_scores/categories.txt \
     ./heritability/Roadmap_U_ABC_h2 \
