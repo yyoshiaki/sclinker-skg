@@ -8,8 +8,6 @@ source $1
 mkdir -p $WORKDIR
 cd $WORKDIR
 
-mkdir -p img
-
 eval "$(conda shell.bash hook)"
 # conda activate scanpy1.8.1
 
@@ -66,8 +64,7 @@ done
 conda activate base
 
 # 9. visualize
-mkdir -p img
-/usr/bin/Rscript ${BASEDIR}/scripts/visualize_Escore.R \
+Rscript ${BASEDIR}/scripts/visualize_Escore.R \
     ${DIR_REF}/sumstats.csv \
     ./gene_scores/categories.txt \
     ./heritability/Roadmap_U_ABC_h2 \
