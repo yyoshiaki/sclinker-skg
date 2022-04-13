@@ -69,7 +69,7 @@ conda activate base
 
 # 9. visualize
 Rscript ${BASEDIR}/scripts/visualize_Escore.R \
-    ${DIR_REF}/sumstats.csv \
+    ${CSV_SUMSTATS} \
     ./gene_scores/categories.txt \
     ./heritability/Roadmap_U_ABC_h2 \
     ./img
