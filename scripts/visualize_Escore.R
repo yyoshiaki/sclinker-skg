@@ -51,7 +51,7 @@ df['-log10(qEscore)'] <- -log10(df$qEscore)
 ####### Autoimmune
 df.plot <- df %>% filter(Autoimmune == 1)
 
-ggplot(df.plot, aes(Annotations, Trait, colour = -log10(qEscore), size = Escore)) +
+ggplot(df.plot, aes(Annotations, Trait, size = -log10(qEscore), colour = Escore)) +
   geom_point() +
   scale_color_gradient(low="white", high="red") +
   theme_classic() +
@@ -61,7 +61,7 @@ ggsave(paste0(dir_img, '/AID.pdf'), width = 8, height = 5)
 ####### Blood
 df.plot <- df %>% filter(Blood == 1)
 
-ggplot(df.plot, aes(Annotations, Trait, colour = -log10(qEscore), size = Escore)) +
+ggplot(df.plot, aes(Annotations, Trait, size = -log10(qEscore), colour = Escore)) +
   geom_point() +
   scale_color_gradient(low="white", high="red") +
   theme_classic() +
@@ -71,7 +71,7 @@ ggsave(paste0(dir_img, '/Blood.pdf'), width = 8, height = 5)
 ####### Neurodegenerative
 df.plot <- df %>% filter(Neurodegenerative == 1)
 
-ggplot(df.plot, aes(Annotations, Trait, colour = -log10(qEscore), size = Escore)) +
+ggplot(df.plot, aes(Annotations, Trait, size = -log10(qEscore), colour = Escore)) +
   geom_point() +
   scale_color_gradient(low="white", high="red") +
   theme_classic() +
@@ -81,7 +81,7 @@ ggsave(paste0(dir_img, '/Neurodegenerative.pdf'), width = 8, height = 5)
 ####### All
 df.plot <- df
 
-ggplot(df.plot, aes(Annotations, Trait, colour = -log10(qEscore), size = Escore)) +
+ggplot(df.plot, aes(Annotations, Trait, size = -log10(qEscore), colour = Escore)) +
   geom_point() +
   scale_color_gradient(low="white", high="red") +
   theme_classic() +
